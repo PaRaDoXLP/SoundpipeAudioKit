@@ -13,6 +13,7 @@ public class PitchTap: BaseTap {
 
     /// Detected amplitude (average of left and right channels)
     public var amplitude: Float {
+        NSLog("AMP: \(amp.reduce(0.0) { $0 + $1 } / Float(2))")
         return amp.reduce(0.0) { $0 + $1 } / Float(2) //amp.reduce(0, +) / 2
     }
 
